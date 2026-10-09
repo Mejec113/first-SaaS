@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes clients - CoiffeurPro</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <main class="hero">
+        <h1>Mes clients </h1>
+        <p>Enregistrez et retrouvez les clients de votre salon.</p>
+
+        <form action="/clients" method="POST" class="client-form">
+            <label for="nom">Nom du client</label>
+            <input type="text" id="nom" name="nom"
+                   placeholder="Ex. : Jean" required>
+
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone"
+                   placeholder="Numéro de téléphone">
+
+            <button type="submit">Ajouter le client</button>
+        </form>
+
+        
+<h2>Liste des clients</h2>
+
+{% if clients %}
+    {% for client in clients %}
+        
+<div class="client-item">
+    <strong>{{ client[1] }}</strong>
+    <p>{{ client[2] or "Aucun téléphone renseigné" }}</p>
+
+    <div class="client-actions">
+        <a class="btn btn-edit"
+           href="{{ url_for('modifier_client', client_id=client[0]) }}">
+             Modifier
+        </a>
+
+        <form action="{{ url_for('supprimer_client', client_id=client[0]) }}"
+              method="POST"
+              onsubmit="return confirm('Voulez-vous vraiment supprimer ce client ?');">
+
+            <button type="submit" class="btn btn-delete">
+                 Supprimer
+            </button>
+        </form>
+    </div>
+</div>
+
+    {% endfor %}
+{% else %}
+    <p>Vous n'avez pas encore de clients enregistrés.</p>
+{% endif %}
+
+
+</body>
+</html>

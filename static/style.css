@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+/* BARRE DE NAVIGATION */
+
+.navbar {
+    height: 70px;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.menu a:hover {
+    color: #00bcd4;
+}
+
+
+/* PARTIE PRINCIPALE */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+    font-size: 20px;
+    color: #666;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+.hero button {
+    margin-top: 30px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+.hero button:hover {
+    background-color: #00bcd4;
+}
+/* login */
+/* PAGE DE CONNEXION */
+
+.login {
+    width: 400px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 100px auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+.login input {
+    height: 45px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+
+.login input:focus {
+    outline: none;
+    border-color: #00bcd4;
+}
+
+
+.login button {
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.login button:hover {
+    background-color: #00bcd4;
+}
+
+
+.client-form {
+    max-width: 450px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.client-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.client-form button {
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.client-item {
+    max-width: 450px;
+    margin: 12px auto;
+    padding: 18px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.client-item p {
+    margin-top: 8px;
+}
+
+
+/* ===== ESPACE CLIENTS : COIFFEURPRO ===== */
+
+.client-form {
+    max-width: 520px;
+    margin: 30px auto 45px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e8eaf0;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(20, 30, 50, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.client-form label {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.client-form input {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    background: #f9fafb;
+    border: 1px solid #dfe3eb;
+    border-radius: 9px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.client-form input:focus {
+    outline: none;
+    border-color: #0891b2;
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.12);
+    background: #ffffff;
+}
+
+.client-form button {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 12px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #0e7490;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.client-form button:hover {
+    background: #155e75;
+    transform: translateY(-1px);
+}
+
+
+/* ===== TITRES ===== */
+
+.hero h1 {
+    color: #172033;
+    letter-spacing: -1px;
+}
+
+.hero h2 {
+    margin: 35px 0 22px;
+    color: #172033;
+    font-size: 25px;
+}
+
+
+/* ===== FICHES CLIENTS ===== */
+
+.client-item {
+    max-width: 650px;
+    margin: 14px auto;
+    padding: 22px 24px;
+    background: #ffffff;
+    border: 1px solid #e8eaf0;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(20, 30, 50, 0.04);
+    text-align: left;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.client-item:hover {
+    box-shadow: 0 9px 24px rgba(20, 30, 50, 0.09);
+    transform: translateY(-2px);
+}
+
+.client-item strong {
+    display: block;
+    margin-bottom: 7px;
+    color: #172033;
+    font-size: 18px;
+}
+
+.client-item p {
+    margin-bottom: 16px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ===== BOUTONS D'ACTION ===== */
+
+.client-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-edit {
+    background: #e0f2fe;
+    color: #075985;
+}
+
+.btn-edit:hover {
+    background: #bae6fd;
+}
+
+.btn-delete {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.btn-delete:hover {
+    background: #fecaca;
+}
+
+
+/* ===== LIENS DE RETOUR ===== */
+
+.hero > p a {
+    color: #0e7490;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero > p a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== ADAPTATION AUX PETITS ÉCRANS ===== */
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 55px 16px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .client-form {
+        padding: 20px;
+        margin-top: 22px;
+    }
+
+    .client-item {
+        padding: 18px;
+    }
+
+    .client-actions {
+        align-items: stretch;
+    }
+
+    .client-actions .btn {
+        flex: 1;
+    }
+}

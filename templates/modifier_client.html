@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier un client - CoiffeurPro</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="hero">
+        <h1>Modifier le client</h1>
+
+        <form method="POST"
+              action="{{ url_for('modifier_client', client_id=client[0]) }}"
+              class="client-form">
+
+            <label for="nom">Nom du client</label>
+            <input type="text" id="nom" name="nom"
+                   value="{{ client[1] }}" required>
+
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone"
+                   value="{{ client[2] or '' }}">
+
+            <button type="submit">Enregistrer les modifications</button>
+        </form>
+
+        <p><a href="{{ url_for('clients') }}">Annuler et retourner aux clients</a></p>
+    </main>
+</body>
+</html>
